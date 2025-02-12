@@ -2,16 +2,15 @@
 include '../connection.php';
 
 // Menangkap data yang dikirim
+$id_barang = $_POST['id_barang'];
 $Nama = $_POST['Nama'];
-$Penerima = $_POST['Penerima'];
-$Lantai = $_POST['Lantai'];
+$TanggalMasuk = $_POST['TanggalMasuk'];
 $JenisBarang = $_POST['JenisBarang'];
-$kondisi1 = implode(", ", $_POST['kondisi1']);
-$kondisi2 = $_POST['kondisi2'];
+$LokasiBarang = $_POST['LokasiBarang'];
 $Saran = $_POST['Saran'];
 
 // Input ke database
-mysqli_query($koneksi, "INSERT INTO masuk (Nama, Penerima, Lantai, JenisBarang, kondisi1, kondisi2, Saran) VALUES ('$Nama','$Penerima', '$Lantai', '$JenisBarang', '$kondisi1', '$kondisi2', '$Saran');");
+mysqli_query($koneksi, "INSERT INTO masuk (id_barang, Nama, TanggalMasuk, JenisBarang, LokasiBarang, Saran) VALUES ('$id_barang','$Nama','$TanggalMasuk','$JenisBarang','$LokasiBarang','$Saran');");
 
 // Kembali ke index.php
-header("location:showDataMasuk.php");
+header("location:masuk.php");

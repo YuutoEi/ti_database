@@ -15,48 +15,56 @@ Sumber Belajar
     -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spark. Support</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Barang Rusak</title>
 </head>
 
 <body>
     
-    <div class="header">
-        <h1 class="header-text">TI Database</h1>
-    </div>
+<div class="header">
+    <h1>Barang Rusak</h1>
+    <a href="../index.php" target="" >Home</a>
+    <a href="showDataMasuk.php" target="_blank" >Show Data</a>
+    <a href="../barang_rusak/masuk.php" target="" >Barang Masuk</a>
+    <a href="../barang_rusak/proses.php" target="" >Barang Proses</a>
+    <a href="../barang_rusak/keluar.php" target="" >Barang Keluar</a>
+  </div>
     <hr>
     
     <div class="isi">
-
-        <div class="tambah">
-        <button> <a class="add-acti" href="../index.php">+ Add Response</a> </button>
-        </div>
 
         <br><br>
 
         <table border="1">
             <tr>
                 <th>No</th>
+                <th>Id Barang</th>
                 <th>Nama</th>
+                <th>Tanggal Masuk</th>
                 <th>Jenis Barang</th>
-                <th>Kondisi</th>
+                <th>Lokasi Barang</th>
+                <th>Tambahan</th>
                 <th>Action</th>
             </tr>
             <?php
             include '../connection.php';
             $no = 1;
-            $data = mysqli_query($koneksi, "select * from rusak");
+            $data = mysqli_query($koneksi, "select * from masuk");
             while ($d = mysqli_fetch_array($data)) {
             ?>
 
                 <tr>
                     <td><?php echo $no++; ?></td>
+                    <td><?php echo $d['id_barang'] ?></td>
                     <td><?php echo $d['Nama'] ?></td>
+                    <td><?php echo $d['TanggalMasuk'] ?></td>
                     <td><?php echo $d['JenisBarang'] ?></td>
-                    <td><?php echo $d['Kondisi'] ?></td>
+                    <!-- <td><?php #echo $d['Kondisi1']; echo ", ", $d['Kondisi2'] ?></td> -->
+                    <td><?php echo $d['LokasiBarang'] ?></td>
+                    <td><?php echo $d['Saran'] ?></td>
                     <td>
-                        <a href="edit.php?id=<?php echo $d['id']; ?>">EDIT</a>
-                        <a href="hapus.php?id=<?php echo $d['id']; ?>">DELETE</a>
+                        <a href="edit.php?id=<?php echo $d['id_masuk']; ?>">EDIT</a>
+                        <a href="hapus.php?id=<?php echo $d['id_masuk']; ?>">DELETE</a>
                     </td>
                 </tr>
             <?php

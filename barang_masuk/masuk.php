@@ -18,11 +18,24 @@
       <h3>Masukkan Barang</h3><br>
         <div class="Nama">
           <label for="input-nama">Nama Barang :</label><br>
-          <input type="text" name="Nama" placeholder="nama..." id="input-nama" required /><br><br>
-          <label for="input-penerima">Penerima :</label><br>
-          <input type="text" name="Penerima" placeholder="nama..." id="input-penerima" required /><br><br>
-          <label for="input-lantai">Lantai :</label><br>
-          <input type="text" name="Lantai" placeholder="lantai berapa..." id="input-lantai" required /><br><br>
+          <input type="text" name="Nama" placeholder="................" id="input-nama" required /><br><br>
+          <label for="id_barang">
+            ID Barang :
+            <input type="text" name="id_barang" id="id_barang" placeholder="................" required>
+          </label>
+        </div>
+        <div class="lokasi">
+          <label for="lokasi">Lokasi :</label><br>
+          <input type="text" name="LokasiBarang" id="lokasi" placeholder="................" required>
+        </div>
+        <div class="tanggal">
+          
+          <label for="tanggal">
+            <br>
+            Tanggal :
+          </label>
+          <input type="date" name="TanggalMasuk" id="tanggal" required>
+          <br><br>
         </div>
 
     
@@ -30,26 +43,12 @@
         <div class="JenisBarang">
           <label for="jenis-barang">Jenis Barang :</label><br>
           <select name="JenisBarang" id="jenis_barang">
-            <option value="jenis-1">Jenis 1</option>
-            <option value="Jenis-2">Jenis 2</option>
-            <option value="Jenis-3">Jenis 3</option>
+            <option value="Komputer">Komputer / Laptop</option>
+            <option value="Printer">Printer</option>
+            <option value="Internet">Internet (ex: Router, Switch, dll)</option>
             <option value="lainnya">Lainnya</option>
           </select>
         </div>
-        <br>
-        <br>
-        <div class="kondisi">
-          <label for="kondisi">Kondisi Barang :</label><br>
-          <input type="checkbox" name="kondisi1[]" id="kondisi" value="Bagus">
-          <label for="kondisi">Bagus</label><br>
-          <input type="checkbox" name="kondisi1[]" id="kondisi" value="Netral">
-          <label for="kondisi">Netral</label><br>
-          <input type="checkbox" name="kondisi1[]" id="kondisi" value="Buruk">
-          <label for="kondisi">Buruk</label><br>
-          <label for="lainnya">Lainnya</label>
-          <input type="text" placeholder="ketik disini..." name="kondisi2" id="kondisi">
-        </div>
-        
         <br>
         <br>
         <div class="Saran">

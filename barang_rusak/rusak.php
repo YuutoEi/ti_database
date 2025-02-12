@@ -3,38 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/index.css">
+    <link rel="stylesheet" href="style.css">
     <title>TI</title>
 </head>
 <body>
-    <h1>Masukan Barang</h1>
-    <br>
-    <a href="showDataRusak.php" target="_blank" >Show Data</a>
+  <div class="header">
+    <h1>Barang Rusak</h1>
+    <a href="../index.php" target="" >Home</a>
+    <a href="showDataMasuk.php" target="_blank" >Show Data</a>
+    <a href="../barang_rusak/rusak.php" target="" >Barang Proses</a>
+  </div>
     <br><br>
-    <h3>Barang Rusak</h3>
-    <form method="post" action="rusak-tambah.php">
+    <form method="post" action="masuk-tambah.php">
+      <h3>Masukkan Barang</h3><br>
         <div class="Nama">
           <label for="input-nama">Nama Barang :</label><br>
-          <input type="text" name="Nama" placeholder="nama..." id="input-nama" required /><br><br>
+          <input type="text" name="Nama" placeholder="................" id="input-nama" required /><br><br>
+          <label for="id_barang">
+            ID Barang :
+            <input type="text" name="id_barang" id="id_barang" placeholder="................" required>
+          </label>
         </div>
-
-        <br /><br />
-
-        <div class="JenisBarang">
-          <label for="jenis-barang">Jenis Barang :</label><br>
-          <select name="JenisBarang" id="jenis_barang">
-            <option value="jenis-1">Jenis 1</option>
-            <option value="Jenis-2">Jenis 2</option>
-            <option value="Jenis-3">Jenis 3</option>
-            <option value="lainnya">Lainnya</option>
-          </select>
+        <div class="lokasi">
+          <label for="lokasi">Lokasi :</label><br>
+          <input type="text" name="LokasiBarang" id="lokasi" placeholder="................" required>
         </div>
         <br>
         <br>
-        <br>
-        <div class="Kondisi">
-          <label for="kondisi">Tambahan :</label><br>
-          <textarea rows="5" cols="40" name="kondisi" id="kondisi" placeholder="ketik disini...."></textarea>
+        <div class="Saran">
+          <label for="pesan-tambahan">Tambahan :</label><br>
+          <textarea rows="5" name="Keterangan" id="pesan-tambahan" placeholder="ketik disini...."></textarea>
         </div>
         <br>
 

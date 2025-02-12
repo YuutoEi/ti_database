@@ -36,12 +36,12 @@ Sumber Belajar
         <table border="1">
             <tr>
                 <th>No</th>
+                <th>Id Barang</th>
                 <th>Nama</th>
-                <th>Penerima</th>
-                <th>Lantai</th>
+                <th>Tanggal Masuk</th>
                 <th>Jenis Barang</th>
-                <th>Kondisi</th>
-                <th>Saran</th>
+                <th>Lokasi Barang</th>
+                <th>Tambahan</th>
                 <th>Action</th>
             </tr>
             <?php
@@ -53,14 +53,14 @@ Sumber Belajar
 
                 <tr>
                     <td><?php echo $no++; ?></td>
+                    <td><?php echo $d['id_barang'] ?></td>
                     <td><?php echo $d['Nama'] ?></td>
-                    <td><?php echo $d['Penerima'] ?></td>
-                    <td><?php echo $d['Lantai'] ?></td>
+                    <td><?php echo $d['TanggalMasuk'] ?></td>
                     <td><?php echo $d['JenisBarang'] ?></td>
-                    <td><?php echo $d['Kondisi1']; echo ", ", $d['Kondisi2'] ?></td>
+                    <!-- <td><?php #echo $d['Kondisi1']; echo ", ", $d['Kondisi2'] ?></td> -->
+                    <td><?php echo $d['LokasiBarang'] ?></td>
                     <td><?php echo $d['Saran'] ?></td>
                     <td>
-                        <a href="edit.php?id=<?php echo $d['id_masuk']; ?>">EDIT</a>
                         <a href="hapus.php?id=<?php echo $d['id_masuk']; ?>">DELETE</a>
                     </td>
                 </tr>
