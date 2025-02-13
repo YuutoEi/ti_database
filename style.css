@@ -52,3 +52,41 @@ a {
     text-decoration: none;
 }
 
+div.barang-proses {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width:400px;
+    margin: 20px;
+    
+
+}
+.barang-proses h2 {
+    color: #0080ff;
+    margin-bottom: 20px;
+}
+.barang-proses:hover {
+    background-color: #d1d1d1;
+}
+
+div.barang-keluar {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width:400px;
+    margin: 20px;
+    
+
+}
+.barang-keluar h2 {
+    color: #0080ff;
+    margin-bottom: 20px;
+}
+.barang-keluar:hover {
+    background-color: #d1d1d1;
+}
+
