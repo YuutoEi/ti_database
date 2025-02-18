@@ -9,9 +9,18 @@
 <body>
   <div class="header">
     <h1>Barang Masuk</h1>
-    <a href="../index.php" target="" >Home</a>
-    <a href="showDataMasuk.php" target="_blank" >Show Data</a>
-    <a href="../barang_rusak/rusak.php" target="" >Barang Keluar</a>
+    <select onchange="window.open(this.options[this.selectedIndex].value,'_blank')" width="60%" height="60%" name="menu" size="0"><br />
+      <background><span><br />
+          <option > - Show Data - <br /><br /><br />
+          <option value="../barang_masuk/showDataMasuk.php" target="blank">Masuk<br /><br /><br />
+          <option value="../" target="blank"> Keluar<br /><br /><br />
+          <option value="../barang_proses/showDataProses.php" target="blank">Proses<br /><br />
+          <option value="showDataRusak.php" target="blank">Rusak<br /><br />
+    </select>
+    <a href="../index.php">Home</a>
+    <a href="../barang_rusak/rusak.php">Barang Rusak</a>
+    <a href="../barang_proses/proses.php">Barang Proses</a>
+    <a href="">Barang Keluar</a>
   </div>
     <br><br>
     <form method="post" action="masuk-tambah.php">

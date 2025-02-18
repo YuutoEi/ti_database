@@ -34,23 +34,28 @@ Sumber Belajar
         <br><br>
 
         <table border="1">
-            <tr>
-                <th>No</th>
-                <th>Id Barang</th>
-                <th>Nama</th>
-                <th>Tanggal Masuk</th>
-                <th>Jenis Barang</th>
-                <th>Lokasi Barang</th>
-                <th>Tambahan</th>
-                <th>Action</th>
-            </tr>
+            <thead>
+
+                <tr>
+                    <th>No</th>
+                    <th>Id Barang</th>
+                    <th>Nama</th>
+                    <th>Tanggal Masuk</th>
+                    <th>Jenis Barang</th>
+                    <th>Lokasi Barang</th>
+                    <th>Tambahan</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
             <?php
             include '../connection.php';
             $no = 1;
             $data = mysqli_query($koneksi, "select * from masuk");
             while ($d = mysqli_fetch_array($data)) {
             ?>
+            <tbody>
 
+                
                 <tr>
                     <td><?php echo $no++; ?></td>
                     <td><?php echo $d['id_barang'] ?></td>
@@ -59,11 +64,12 @@ Sumber Belajar
                     <td><?php echo $d['JenisBarang'] ?></td>
                     <!-- <td><?php #echo $d['Kondisi1']; echo ", ", $d['Kondisi2'] ?></td> -->
                     <td><?php echo $d['LokasiBarang'] ?></td>
-                    <td><?php echo $d['Saran'] ?></td>
+                    <td id="tambahan"><?php echo $d['Saran'] ?></td>
                     <td>
                         <a href="hapus.php?id=<?php echo $d['id_masuk']; ?>">DELETE</a>
                     </td>
                 </tr>
+            </tbody>
             <?php
             }
             ?>

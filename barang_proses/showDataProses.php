@@ -16,15 +16,15 @@ Sumber Belajar
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Barang Rusak</title>
+    <title>Barang Masuk</title>
 </head>
 
 <body>
     
 <div class="header">
-    <h1>Barang Rusak</h1>
+    <h1>Barang Masuk</h1>
     <a href="../index.php" target="" >Home</a>
-    <a href="showDataRusak.php" target="_blank" >Show Data</a>
+    <a href="showDataMasuk.php" target="_blank" >Show Data</a>
     <a href="../barang_rusak/rusak.php" target="" >Barang Keluar</a>
   </div>
     <hr>
@@ -47,7 +47,7 @@ Sumber Belajar
             <?php
             include '../connection.php';
             $no = 1;
-            $data = mysqli_query($koneksi, "select * from rusak");
+            $data = mysqli_query($koneksi, "select * from proses");
             while ($d = mysqli_fetch_array($data)) {
             ?>
 
@@ -61,7 +61,7 @@ Sumber Belajar
                     <td><?php echo $d['LokasiBarang'] ?></td>
                     <td><?php echo $d['Saran'] ?></td>
                     <td>
-                        <a href="hapus.php?id=<?php echo $d['id_rusak']; ?>">DELETE</a>
+                        <a href="hapus.php?id=<?php echo $d['id_masuk']; ?>">DELETE</a>
                     </td>
                 </tr>
             <?php
