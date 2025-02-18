@@ -1,0 +1,95 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+.header{
+    background-color: #0080ff;
+    padding: 50px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.header h1{
+    color: white;
+    margin-bottom: 20px;
+}
+.header a{
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    margin-left: 10px;
+    text-align: center;
+}
+.header a:hover{
+    color: #0080ff;
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+
+}
+form{
+    padding: 50px;
+}
+.Nama input{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+#submit{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #0080ff;
+    border-radius: 5px;
+    background-color: #0080ff;
+    color: white;
+    cursor: pointer;
+}
+#submit:hover{
+    background-color: white;
+    color: #0080ff;
+}
+
+textarea{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.isi{
+    padding: 20px;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+table th{
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+.tanggal input{
+    width: 30%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.JenisBarang select{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.lokasi input{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
