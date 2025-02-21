@@ -22,7 +22,7 @@ Sumber Belajar
 <body>
     
 <div class="header">
-    <h1>Barang Rusak</h1>
+    <h1>Barang Keluar</h1>
     <a href="../index.php" target="" >Home</a>
     <a href="showDataRusak.php" target="_blank" >Show Data</a>
     <a href="../barang_rusak/rusak.php" target="" >Barang Keluar</a>
@@ -47,7 +47,7 @@ Sumber Belajar
             <?php
             include '../connection.php';
             $no = 1;
-            $data = mysqli_query($koneksi, "select * from rusak");
+            $data = mysqli_query($koneksi, "select * from keluar");
             while ($d = mysqli_fetch_array($data)) {
             ?>
 
@@ -61,7 +61,7 @@ Sumber Belajar
                     <td><?php echo $d['LokasiBarang'] ?></td>
                     <td><?php echo $d['Saran'] ?></td>
                     <td>
-                        <a href="hapus.php?id=<?php echo $d['id_rusak']; ?>">DELETE</a>
+                        <a href="hapus.php?id=<?php echo $d['id_keluar']; ?>">DELETE</a>
                     </td>
                 </tr>
             <?php

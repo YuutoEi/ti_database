@@ -3,9 +3,9 @@ include '../connection.php';
 
 $id = $_GET['id'];
 
-mysqli_query($koneksi,"DELETE FROM `rusak` WHERE id_rusak='$id'");
+mysqli_query($koneksi,"DELETE FROM `keluar` WHERE id_keluar='$id'");
 
-header("location:showDataRusak.php")
+header("location:showDataKeluar.php")
 
 
 

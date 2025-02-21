@@ -8,13 +8,22 @@
 </head>
 <body>
   <div class="header">
-    <h1>Barang Rusak</h1>
-    <a href="../index.php" target="" >Home</a>
-    <a href="showDataRusak.php" target="_blank" >Show Data</a>
-    <a href="../barang_masuk/masuk.php" target="" >Barang Masuk</a>
+    <h1>Barang Keluar</h1>
+    <select onchange="window.open(this.options[this.selectedIndex].value,'_blank')" width="60%" height="60%" name="menu" size="0"><br />
+      <background><span><br />
+          <option > - Show Data - <br /><br /><br />
+          <option value="../barang_masuk/showDataMasuk.php" target="blank">Masuk<br /><br /><br />
+          <option value="showDataKeluar.php" target="blank"> Keluar<br /><br /><br />
+          <option value="../barang_proses/showDataProses.php" target="blank">Proses<br /><br />
+          <option value="../showDataRusak/showDataRusak.php" target="blank">Rusak<br /><br />
+    </select>
+    <a href="../index.php">Home</a>
+    <a href="../barang_masuk/masuk.php">Barang Masuk</a>
+    <a href="../barang_rusak/rusak.php">Barang Rusak</a>
+    <a href="../barang_proses/proses.php">Barang Proses</a>
   </div>
     <br><br>
-    <form method="post" action="rusak-tambah.php">
+    <form method="post" action="keluar-tambah.php">
       <h3>Masukkan Barang Rusak</h3><br>
         <div class="Nama">
           <label for="input-nama">Nama Barang :</label><br>

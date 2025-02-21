@@ -18,9 +18,9 @@
           <option value="showDataRusak.php" target="blank">Rusak<br /><br />
     </select>
     <a href="../index.php">Home</a>
+    <a href="../barang_keluar/keluar.php">Barang Keluar</a>
     <a href="../barang_rusak/rusak.php">Barang Rusak</a>
     <a href="../barang_proses/proses.php">Barang Proses</a>
-    <a href="">Barang Keluar</a>
   </div>
     <br><br>
     <form method="post" action="masuk-tambah.php">
