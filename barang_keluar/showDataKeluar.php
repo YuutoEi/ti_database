@@ -22,10 +22,20 @@ Sumber Belajar
 <body>
     
 <div class="header">
-    <h1>Barang Keluar</h1>
-    <a href="../index.php" target="" >Home</a>
-    <a href="showDataRusak.php" target="_blank" >Show Data</a>
-    <a href="../barang_rusak/rusak.php" target="" >Barang Keluar</a>
+    <h1>Data Barang Keluar</h1>
+    <select onchange="window.open(this.options[this.selectedIndex].value,'_self')" width="60%" height="60%" name="menu" size="0"><br />
+      <background><span><br />
+          <option value="../barang_keluar/showDataKeluar.php" > - Show Data - <br /><br /><br />
+          <option value="../barang_masuk/showDataMasuk.php">Masuk<br /><br /><br />
+          <option value="../barang_keluar/showDataKeluar.php"> Keluar<br /><br /><br />
+          <option value="../barang_proses/showDataProses.php">Proses<br /><br />
+          <option value="../barang_rusak/showDataRusak.php">Rusak<br /><br />
+    </select>
+    <a href="../index.php">Home</a>
+    <a href="../barang_masuk/masuk.php">Barang Masuk</a>
+    <a href="../barang_keluar/keluar.php">Barang Keluar</a>
+    <a href="../barang_rusak/rusak.php">Barang Rusak</a>
+    <a href="../barang_proses/proses.php">Barang Proses</a>
   </div>
     <hr>
     
@@ -33,16 +43,18 @@ Sumber Belajar
 
         <br><br>
 
-        <table border="1">
+        <table border="1" width="100%">
+        
+
             <tr>
-                <th>No</th>
-                <th>Id Barang</th>
-                <th>Nama</th>
-                <th>Tanggal Masuk</th>
-                <th>Jenis Barang</th>
-                <th>Lokasi Barang</th>
-                <th>Tambahan</th>
-                <th>Action</th>
+                <th width="10%">No</th>
+                <th width="10%">Id Barang</th>
+                <th width="20%">Nama</th>
+                <th width="10%">Tanggal</th>
+                <th width="10%">Jenis Barang</th>
+                <th width="15%">Lokasi Barang</th>
+                <th width="20%">Tambahan</th>
+                <th width="5%">Action</th>
             </tr>
             <?php
             include '../connection.php';
@@ -50,7 +62,9 @@ Sumber Belajar
             $data = mysqli_query($koneksi, "select * from keluar");
             while ($d = mysqli_fetch_array($data)) {
             ?>
+            <tbody>
 
+                
                 <tr>
                     <td><?php echo $no++; ?></td>
                     <td><?php echo $d['id_barang'] ?></td>
@@ -59,11 +73,12 @@ Sumber Belajar
                     <td><?php echo $d['JenisBarang'] ?></td>
                     <!-- <td><?php #echo $d['Kondisi1']; echo ", ", $d['Kondisi2'] ?></td> -->
                     <td><?php echo $d['LokasiBarang'] ?></td>
-                    <td><?php echo $d['Saran'] ?></td>
+                    <td id="tambahan"><?php echo $d['Saran'] ?></td>
                     <td>
                         <a href="hapus.php?id=<?php echo $d['id_keluar']; ?>">DELETE</a>
                     </td>
                 </tr>
+            </tbody>
             <?php
             }
             ?>
@@ -74,7 +89,6 @@ Sumber Belajar
 
 
     </table>
-
 </body>
 
 </html>

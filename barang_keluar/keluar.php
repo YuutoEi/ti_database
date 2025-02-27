@@ -9,13 +9,13 @@
 <body>
   <div class="header">
     <h1>Barang Keluar</h1>
-    <select onchange="window.open(this.options[this.selectedIndex].value,'_blank')" width="60%" height="60%" name="menu" size="0"><br />
+    <select onchange="window.open(this.options[this.selectedIndex].value,'_self')" width="60%" height="60%" name="menu" size="0"><br />
       <background><span><br />
           <option > - Show Data - <br /><br /><br />
-          <option value="../barang_masuk/showDataMasuk.php" target="blank">Masuk<br /><br /><br />
-          <option value="showDataKeluar.php" target="blank"> Keluar<br /><br /><br />
-          <option value="../barang_proses/showDataProses.php" target="blank">Proses<br /><br />
-          <option value="../showDataRusak/showDataRusak.php" target="blank">Rusak<br /><br />
+          <option value="../barang_masuk/showDataMasuk.php">Masuk<br /><br /><br />
+          <option value="showDataKeluar.php"> Keluar<br /><br /><br />
+          <option value="../barang_proses/showDataProses.php">Proses<br /><br />
+          <option value="../showDataRusak/showDataRusak.php">Rusak<br /><br />
     </select>
     <a href="../index.php">Home</a>
     <a href="../barang_masuk/masuk.php">Barang Masuk</a>
@@ -24,7 +24,7 @@
   </div>
     <br><br>
     <form method="post" action="keluar-tambah.php">
-      <h3>Masukkan Barang Rusak</h3><br>
+      <h3>Masukkan Barang Keluar</h3><br>
         <div class="Nama">
           <label for="input-nama">Nama Barang :</label><br>
           <input type="text" name="Nama" placeholder="................" id="input-nama" required /><br><br>

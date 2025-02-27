@@ -22,10 +22,20 @@ Sumber Belajar
 <body>
     
 <div class="header">
-    <h1>Barang Masuk</h1>
-    <a href="../index.php" target="" >Home</a>
-    <a href="showDataMasuk.php" target="_blank" >Show Data</a>
-    <a href="../barang_rusak/rusak.php" target="" >Barang Keluar</a>
+    <h1>Data Barang Masuk</h1>
+    <select onchange="window.open(this.options[this.selectedIndex].value,'_self')" width="60%" height="60%" name="menu" size="0"><br />
+      <background><span><br />
+          <option > - Show Data - <br /><br /><br />
+          <option value="../barang_masuk/showDataMasuk.php">Masuk<br /><br /><br />
+          <option value="../barang_keluar/showDataKeluar.php"> Keluar<br /><br /><br />
+          <option value="../barang_proses/showDataProses.php">Proses<br /><br />
+          <option value="../barang_rusak/showDataRusak.php">Rusak<br /><br />
+    </select>
+    <a href="../index.php">Home</a>
+    <a href="../barang_masuk/masuk.php">Barang Masuk</a>
+    <a href="../barang_keluar/keluar.php">Barang Keluar</a>
+    <a href="../barang_rusak/rusak.php">Barang Rusak</a>
+    <a href="../barang_proses/proses.php">Barang Proses</a>
   </div>
     <hr>
     
@@ -33,20 +43,19 @@ Sumber Belajar
 
         <br><br>
 
-        <table border="1">
-            <thead>
+        <table border="1" width="100%">
+        
 
-                <tr>
-                    <th>No</th>
-                    <th>Id Barang</th>
-                    <th>Nama</th>
-                    <th>Tanggal Masuk</th>
-                    <th>Jenis Barang</th>
-                    <th>Lokasi Barang</th>
-                    <th>Tambahan</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
+            <tr>
+                <th width="10%">No</th>
+                <th width="10%">Id Barang</th>
+                <th width="20%">Nama</th>
+                <th width="10%">Tanggal Masuk</th>
+                <th width="10%">Jenis Barang</th>
+                <th width="15%">Lokasi Barang</th>
+                <th width="20%">Tambahan</th>
+                <th width="5%">Action</th>
+            </tr>
             <?php
             include '../connection.php';
             $no = 1;
