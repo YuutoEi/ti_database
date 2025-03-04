@@ -8,26 +8,16 @@
 </head>
 <body>
   <div class="header">
-    <h1>Barang Masuk</h1>
-    <select onchange="window.open(this.options[this.selectedIndex].value,'_self')" width="60%" height="60%" name="menu" size="0"><br />
-      <background><span><br />
-          <option > - Show Data - <br /><br /><br />
-          <option value="../barang_masuk/showDataMasuk.php">Masuk<br /><br /><br />
-          <option value="../barang_keluar/showDataKeluar.php"> Keluar<br /><br /><br />
-          <option value="../barang_proses/showDataProses.php">Proses<br /><br />
-          <option value="../barang_rusak/showDataRusak.php">Rusak<br /><br />
-    </select>
+    <h1>Data Barang</h1>
     <a href="../index.php">Home</a>
-    <a href="../barang_keluar/keluar.php">Barang Keluar</a>
-    <a href="../barang_rusak/rusak.php">Barang Rusak</a>
-    <a href="../barang_proses/proses.php">Barang Proses</a>
+    <a href="showDataMasuk.php">Show Data</a>
   </div>
     <br><br>
     <form method="post" action="masuk-tambah.php">
       <h3>Masukkan Barang</h3><br>
         <div class="Nama">
           <label for="input-nama">Nama Barang :</label><br>
-          <input type="text" name="Nama" placeholder="................" id="input-nama" required /><br><br>
+          <input type="text" name="Nama" placeholder="................" id="input-nama" required />
           <label for="id_barang">
             ID Barang :
             <input type="text" name="id_barang" id="id_barang" placeholder="................" required>
@@ -59,10 +49,20 @@
           </select>
         </div>
         <br>
+        <div class="StatusBarang">
+          <label for="StatusBarang">Status Barang :</label><br>
+          <select name="StatusBarang" id="StatusBarang">
+            <option value="Masuk">Masuk</option>
+            <option value="Proses">Proses</option>
+            <option value="Keluar">Keluar</option>
+            <option value="Rusak">Rusak</option>
+          </select>
+        </div>
         <br>
-        <div class="Saran">
+
+        <div class="Tambahan">
           <label for="pesan-tambahan">Tambahan :</label><br>
-          <textarea rows="5" name="Saran" id="pesan-tambahan" placeholder="ketik disini...."></textarea>
+          <textarea rows="5" name="Tambahan" id="pesan-tambahan" placeholder="ketik disini...."></textarea>
         </div>
         <br>
 

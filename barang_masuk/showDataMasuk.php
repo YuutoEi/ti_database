@@ -52,15 +52,17 @@ Sumber Belajar
                 <th width="20%">Nama</th>
                 <th width="10%">Tanggal Masuk</th>
                 <th width="10%">Jenis Barang</th>
-                <th width="15%">Lokasi Barang</th>
+                <th width="5%">Status Barang</th>
+                <th width="10%">Lokasi Barang</th>
                 <th width="20%">Tambahan</th>
                 <th width="5%">Action</th>
             </tr>
             <?php
             include '../connection.php';
             $no = 1;
-            $data = mysqli_query($koneksi, "select * from masuk");
+            $data = mysqli_query($koneksi, "select * from semua ORDER BY StatusBarang DESC");
             while ($d = mysqli_fetch_array($data)) {
+            
             ?>
             <tbody>
 
@@ -71,9 +73,10 @@ Sumber Belajar
                     <td><?php echo $d['Nama'] ?></td>
                     <td><?php echo $d['TanggalMasuk'] ?></td>
                     <td><?php echo $d['JenisBarang'] ?></td>
+                    <td><?php echo $d['StatusBarang'] ?></td>
                     <!-- <td><?php #echo $d['Kondisi1']; echo ", ", $d['Kondisi2'] ?></td> -->
                     <td><?php echo $d['LokasiBarang'] ?></td>
-                    <td id="tambahan"><?php echo $d['Saran'] ?></td>
+                    <td id="tambahan"><?php echo $d['Tambahan'] ?></td>
                     <td>
                         <a href="hapus.php?id=<?php echo $d['id_masuk']; ?>">DELETE</a>
                     </td>
