@@ -22,10 +22,20 @@ Sumber Belajar
 <body>
     
 <div class="header">
-    <h1>Barang Masuk</h1>
-    <a href="../index.php" target="" >Home</a>
-    <a href="showDataMasuk.php" target="_blank" >Show Data</a>
-    <a href="../barang_rusak/rusak.php" target="" >Barang Keluar</a>
+    <h1>Data Barang Masuk</h1>
+    <select onchange="window.open(this.options[this.selectedIndex].value,'_self')" width="60%" height="60%" name="menu" size="0"><br />
+      <background><span><br />
+          <option > - Show Data - <br /><br /><br />
+          <option value="../barang_masuk/showDataMasuk.php">Masuk<br /><br /><br />
+          <option value="../barang_keluar/showDataKeluar.php"> Keluar<br /><br /><br />
+          <option value="../barang_proses/showDataProses.php">Proses<br /><br />
+          <option value="../barang_rusak/showDataRusak.php">Rusak<br /><br />
+    </select>
+    <a href="../index.php">Home</a>
+    <a href="../barang_masuk/masuk.php">Barang Masuk</a>
+    <a href="../barang_keluar/keluar.php">Barang Keluar</a>
+    <a href="../barang_rusak/rusak.php">Barang Rusak</a>
+    <a href="../barang_proses/proses.php">Barang Proses</a>
   </div>
     <hr>
     
