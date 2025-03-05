@@ -11,25 +11,7 @@
 
     <a href="barang_masuk/masuk.php">
       <div class="barang-masuk">
-        <h2>Barang Masuk</h2>
-      </div>
-    </a>
-    <a href="barang_rusak/rusak.php">
-      <div class="barang-rusak">
-        <h2>Barang Rusak</h2>
-      </div>
-    </a>
-  </div>
-  <div class="bawah">
-
-    <a href="barang_keluar/keluar.php">
-      <div class="barang-keluar">
-        <h2>Barang Keluar</h2>
-      </div>
-    </a>
-    <a href="barang_proses/proses.php">
-      <div class="barang-proses">
-        <h2>Barang Proses</h2>
+        <h2>Data Barang</h2>
       </div>
     </a>
   </div>

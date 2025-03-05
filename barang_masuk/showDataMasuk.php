@@ -60,7 +60,7 @@ Sumber Belajar
             <?php
             include '../connection.php';
             $no = 1;
-            $data = mysqli_query($koneksi, "select * from semua ORDER BY StatusBarang DESC");
+            $data = mysqli_query($koneksi, "select * from semua ORDER BY StatusBarang");
             while ($d = mysqli_fetch_array($data)) {
             
             ?>
